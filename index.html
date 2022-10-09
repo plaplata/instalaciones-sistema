@@ -24,7 +24,7 @@
 			<span class="asterisc">*</span>Campo obligatorio
 		</div>
 		<div style="margin: 0 4rem;">
-			<form action="">
+			<form action="insertar.php"  method="post">
 				<div class="inst_form_content">
 					<!-- CONTACTO -->
 					<div style="font-weight: 700; font-size:1.2rem;">Datos de contacto</div>
@@ -60,6 +60,10 @@
 						<input style="flex-grow: 1;" type="text" name="calentador" id="form-calentador" required maxlength="70">
 					</div>
 					<div class="inst_form_row">
+						<label for="codigo" style="width: 180px;">Código de Producto<span class="asterisc">*</span></label>
+						<input style="flex-grow: 1;" type="text" name="codigoProd" id="form-codigo" required maxlength="10">
+					</div>
+					<div class="inst_form_row">
 						<label for="cantidad" style="width: 180px;">Cantidad de termas</label>
 						<input style="width: 100px;" type="number" name="cantidad" id="form-cantidad">
 					</div>
@@ -74,10 +78,10 @@
 					<!-- LUGAR DE COMPRA -->
 					<div style="font-weight: 700; font-size:1.2rem;">Lugar de compra<span class="asterisc">*</span></div>
 					<div class="">
-						<input type="radio" id="html" name="lugar-compra" value="HTML" style="cursor: pointer;">
+						<input type="radio" id="html" name="lugar-compra" value="Tienda física" style="cursor: pointer;">
 						<label for="html" style="cursor: pointer;">Tienda física</label>
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="radio" id="css" name="lugar-compra" value="CSS" style="cursor: pointer;">
+						<input type="radio" id="css" name="lugar-compra" value="Tienda virtual" style="cursor: pointer;">
 						<label for="css" style="cursor: pointer;">Tienda virtual</label>
 					</div>
 					<br>
