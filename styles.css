@@ -33,9 +33,11 @@ body{
 .inst_title{
   display: flex;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   padding-bottom: 1rem;
+  margin: 0 2rem;
+  text-align: center;
 }
 
 .inst_desc{

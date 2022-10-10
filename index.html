@@ -14,11 +14,11 @@
 	</div>
 	<main class="inst_main">
 		<div class="inst_title">
-			SOLICITUD DE INSTALACIÓN
+			SOLICITUD DE INSTALACIÓN DE TERMA(S) - LIMA METROPOLITANA
 		</div>
 		<div class="inst_desc">
-			La instalación gratuita aplica para Lima Metropolitana (ver cobertura en tarifario)<br>
-			la programación es de 24 a 48 horas.
+			Bienvenido(a), por favor llene el siguiente formulario.<br>
+			La programación es de 24 a 48 horas.
 		</div>
 		<div class="inst_desc2">
 			<span class="asterisc">*</span>Campo obligatorio
@@ -30,33 +30,37 @@
 					<div style="font-weight: 700; font-size:1.2rem;">Datos de contacto</div>
 					<div class="inst_form_row">
 						<label for="nombres" style="width: 180px;">Nombres<span class="asterisc">*</span></label>
-						<input style="flex-grow: 1;" type="text" name="nombres" id="form-nombres" required minlength="2" maxlength="50">
+						<input style="flex-grow: 1;" type="text" name="nombres" id="form-nombres" pattern="[A-Za-z]+" required minlength="2" maxlength="50">
 					</div>
 					<div class="inst_form_row">
 						<label for="apellidos" style="width: 180px;">Apellidos<span class="asterisc">*</span></label>
-						<input style="flex-grow: 1;" type="text" name="apellidos" id="form-apellidos" required minlength="2" maxlength="50">
+						<input style="flex-grow: 1;" type="text" name="apellidos" id="form-apellidos" pattern="[A-Za-z]+" required minlength="2" maxlength="50">
 					</div>
 					<div class="inst_form_row">
 						<label for="correo" style="width: 180px;">Correo<span class="asterisc">*</span></label>
-						<input style="flex-grow: 1;" type="text" name="correo" id="form-correo" required maxlength="30">
+						<input style="flex-grow: 1;" type="email" name="correo" id="form-correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required maxlength="30">
 					</div>
 					<div class="inst_form_row">
 						<label for="celular" style="width: 180px;">Celular<span class="asterisc">*</span></label>
-						<input style="flex-grow: 1;" type="tel" name="celular" id="form-celular" required maxlength="15">
+						<input style="flex-grow: 1;" type="tel" name="celular" id="form-celular" required minlength="9" maxlength="15">
 					</div>
 					<div class="inst_form_row">
 						<label for="telefono" style="width: 180px;">Teléfono fijo</label>
-						<input style="flex-grow: 1;" type="tel" name="telefono" id="form-telefono" maxlength="13">
+						<input style="flex-grow: 1;" type="tel" name="telefono" id="form-telefono" minlength="7" maxlength="13">
 					</div>
 					<br>
 					<!-- COMPRA -->
 					<div style="font-weight: 700; font-size:1.2rem;">Datos de compra</div>
 					<div class="inst_form_row">
 						<label for="categoria" style="width: 180px;">Categoría del producto<span class="asterisc">*</span></label>
-						<input style="flex-grow: 1;" type="text" name="categoria" id="form-categoria" required maxlength="30">
+						<select style="flex-grow: 1;" name="categoria" id="select-categoria">
+							<option value="gnv">Terma a Gas (GNV)</option>
+							<option value="glp">Terma a Gas (GLP)</option>
+							<option value="electrico">Calentadores eléctricos</option>
+						</select>
 					</div>
 					<div class="inst_form_row">
-						<label for="calentador" style="width: 180px;">Calentador<span class="asterisc">*</span></label>
+						<label for="calentador" style="width: 180px; gap: 0 !important;">Calentador<span class="asterisc">*</span></label>
 						<input style="flex-grow: 1;" type="text" name="calentador" id="form-calentador" required maxlength="70">
 					</div>
 					<div class="inst_form_row">
@@ -87,13 +91,58 @@
 					<br>
 					<!-- DATOS DE INSTALACION -->
 					<div style="font-weight: 700; font-size:1.2rem;">Datos de instalación</div>
-					<div class="inst_form_row">
+					<!-- <div class="inst_form_row">
 						<label for="departamento" style="width: 180px;">Departamento<span class="asterisc">*</span></label>
 						<input style="flex-grow: 1;" type="text" name="departamento" id="form-departamento" maxlength="20">
-					</div>
+					</div> -->
 					<div class="inst_form_row">
-						<label for="distrito" style="width: 180px;">Distrito / Provincia<span class="asterisc">*</span></label>
-						<input style="flex-grow: 1;" type="text" name="distrito" id="form-distrito" maxlength="30">
+						<label for="distrito" style="width: 180px;">Distrito<span class="asterisc">*</span></label>
+						<!-- <input style="flex-grow: 1;" type="text" name="distrito" id="form-distrito" maxlength="30"> -->
+						<select style="flex-grow: 1;" name="" id="">
+							<option value="Ancón">Ancón</option>
+							<option value="Ate">Ate</option>
+							<option value="Barranco">Barranco</option>
+							<option value="Breña">Breña</option>
+							<option value="Carabayllo">Carabayllo</option>
+							<option value="Chaclacayo">Chaclacayo</option>
+							<option value="Chorrillos">Chorrillos</option>
+							<option value="Cieneguilla">Cieneguilla</option>
+							<option value="Comas">Comas</option>
+							<option value="El Agustino">El Agustino</option>
+							<option value="Independencia">Independencia</option>
+							<option value="Jesús Marí">Jesús María</option>
+							<option value="La Molina">La Molina</option>
+							<option value="La Victoria">La Victoria</option>
+							<option value="Lima">Lima</option>
+							<option value="Lince">Lince</option>
+							<option value="Los Olivos">Los Olivos</option>
+							<option value="Lurigancho-Chosica">Lurigancho-Chosica</option>
+							<option value="Lurín">Lurín</option>
+							<option value="Magdalena del Mar">Magdalena del Mar</option>
+							<option value="Miraflores">Miraflores</option>
+							<option value="Pachacamac">Pachacamac</option>
+							<option value="Pucusana">Pucusana</option>
+							<option value="Pueblo Libre">Pueblo Libre</option>
+							<option value="Puente Piedra">Puente Piedra</option>
+							<option value="Punta Hermosa">Punta Hermosa</option>
+							<option value="Punta Negra">Punta Negra</option>
+							<option value="Rímac">Rímac</option>
+							<option value="San Bartolo">San Bartolo</option>
+							<option value="San Borja">San Borja</option>
+							<option value="San Isidr">San Isidro</option>
+							<option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
+							<option value="San Juan de Miraflores">San Juan de Miraflores</option>
+							<option value="San Luis">San Luis</option>
+							<option value="San Martín de Porres">San Martín de Porres</option>
+							<option value="San Miguel">San Miguel</option>
+							<option value="Santa Anita">Santa Anita</option>
+							<option value="Santa María del Mar">Santa María del Mar</option>
+							<option value="Santa Rosa">Santa Rosa</option>
+							<option value="Santiago de Surc">Santiago de Surco</option>
+							<option value="Surquillo">Surquillo</option>
+							<option value="Villa EL Salvador">Villa EL Salvador</option>
+							<option value="Villa María del Triunfo">Villa María del Triunfo</option>
+						</select>
 					</div>
 					<div class="inst_form_row">
 						<label for="direccion" style="width: 180px;">Dirección a instalar<span class="asterisc">*</span></label>
